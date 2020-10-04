@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+/* container*/
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; 
+}
+
+/* positions the front and back */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* flips horizontally on a hover */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* positions  front and back  */
+.flipCardFront, .flipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* styles front */
+.flipCardFront {
+  background-color: black;
+  color: #fadd5c;
+  font-family: "Lucida Console", Monaco;
+  font-size: 20px;
+}
+/* Style the back side */
+.flipCardBack {
+  background-color: #fadd5c;
+  color: black;
+  transform: rotateY(180deg);
+}
+    </style>
+  </head>
+  <body>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flipCardFront">
+      <h1>Algorithm</h1>
+    </div>
+    <div class="flipCardBack">
+      <h1>Algorithm</h1>
+      <p>an algorithm is a </p>
+    </div>
+  </div>
+</div>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flipCardFront">
+      <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flipCardBack">
+      <h1>Algorithm</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flipCardFront">
+      <h1>Pseudocode</h1>
+    </div>
+    <div class="flipCardBack">
+      <h1>Pseudocode</h1>
+      <p></p>
+    </div>
+  </div>
+</div> 
+    <script src="script.js"></script>
+  </body>
+</html>
